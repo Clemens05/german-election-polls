@@ -1,0 +1,9 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rules": {
+    "max-classes-per-file": false,
+    "no-namespace": false,
+    "forin": false,
+    "no-shadowed-variable": false
+  }
+}
