@@ -1,3 +1,3 @@
 import { PollHandler } from './pollHandler';
-import { Query } from './query';
-export { PollHandler as default, Query };
+import { DataType, Order, Query } from './query';
+export { PollHandler as default, Query, DataType, Order };
