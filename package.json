@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Clemens05/german-election-poll.git"
+    "url": "git+https://github.com/Clemens05/german-election-polls.git"
   },
   "author": "Clemens Rustemeier",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Clemens05/german-election-poll/issues"
+    "url": "https://github.com/Clemens05/german-election-polls/issues"
   },
-  "homepage": "https://github.com/Clemens05/german-election-poll#readme",
+  "homepage": "https://github.com/Clemens05/german-election-polls#readme",
   "devDependencies": {
     "@types/jest": "^29.2.3",
     "jest": "^29.3.1",
