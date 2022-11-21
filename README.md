@@ -25,7 +25,6 @@ import polls from 'german-election-polls';
     Query.Survey.Sort.allResults(Order.Desc),
   ]);
 })();
-import poll from 'german-election-polls';
 ```
 
 ## Where the data comes from
