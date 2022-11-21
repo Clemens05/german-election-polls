@@ -1,5 +1,8 @@
 # German Election Polls
 
+Get, query and sort german election polls.\
+An internet connection is required.
+
 ## Usage
 
 ### Installing
@@ -11,12 +14,12 @@ npm install german-election-polls
 ### TypeScript Example
 
 ```ts
-import polls from 'german-election-polls';
+import polls, { Query, Order, DataType } from 'german-election-polls';
 
 (async () => {
-  await poll.shared.update();
+  await polls.shared.update();
 
-  const query = poll.shared.select([
+  const query = polls.shared.select([
     Query.include([DataType.Surveys]),
     Query.Survey.Tasker.ID.isNot([4, 6]),
     Query.Survey.Release.isGreater(new Date('2021-11-21')),
@@ -24,18 +27,23 @@ import polls from 'german-election-polls';
     Query.Survey.Sort.byParticipants(Order.Asc),
     Query.Survey.Sort.allResults(Order.Desc),
   ]);
+
+  console.log(query);
 })();
 ```
 
 ### JavaScript Example
 
 ```js
-import polls from 'german-election-polls';
+const polls = require('german-election-polls').default;
+const Query = require('german-election-polls').Query;
+const DataType = require('german-election-polls').DataType;
+const Order = require('german-election-polls').Order;
 
 (async () => {
-  await poll.shared.update();
+  await polls.shared.update();
 
-  const query = poll.shared.select([
+  const query = polls.shared.select([
     Query.include([DataType.Surveys]),
     Query.Survey.Tasker.ID.isNot([4, 6]),
     Query.Survey.Release.isGreater(new Date('2021-11-21')),
@@ -43,6 +51,8 @@ import polls from 'german-election-polls';
     Query.Survey.Sort.byParticipants(Order.Asc),
     Query.Survey.Sort.allResults(Order.Desc),
   ]);
+
+  console.log(query);
 })();
 ```
 
