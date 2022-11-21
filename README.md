@@ -56,9 +56,11 @@ const Order = require('german-election-polls').Order;
 })();
 ```
 
-## Where the data comes from
+## Where the data comes from / Legal
 
 We are using the [DAWUM API](https://dawum.de/API) to collect all data.\
 \
 Data from [dawum.de](https://dawum.de) (License: [ODC-ODbL](https://opendatacommons.org/licenses/odbl/1-0/))\
-Daten von [dawum.de](https://dawum.de) (Lizenz: [ODC-ODbL](https://opendatacommons.org/licenses/odbl/1-0/))
+Daten von [dawum.de](https://dawum.de) (Lizenz: [ODC-ODbL](https://opendatacommons.org/licenses/odbl/1-0/))\
+\
+This script only parses the data provided by DAWUM. Please make sure you understand the [licensing requirements](https://dawum.de) for the actual data.
