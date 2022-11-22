@@ -1,11 +1,13 @@
 import { inspect } from 'util';
-import poll, { Query } from '../index';
+import { Polls, Query } from '../index';
 import { DataType, Order } from '../query';
 
-test('Query', async () => {
-  await poll.shared.update();
+test('Query 001', async () => {
+  const polls = new Polls();
 
-  const query = poll.shared.select([
+  await polls.update();
+
+  const query = polls.select([
     Query.include([DataType.Surveys]),
     Query.Survey.Tasker.ID.isNot([4, 6]),
     Query.Survey.Release.isGreater(new Date('2021-11-21')),

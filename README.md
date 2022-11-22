@@ -14,12 +14,14 @@ npm install german-election-polls
 ### TypeScript Example
 
 ```ts
-import polls, { Query, Order, DataType } from 'german-election-polls';
+import { Polls, Query, Order, DataType } from 'german-election-polls';
 
 (async () => {
-  await polls.shared.update();
+  const polls = new Polls();
 
-  const query = polls.shared.select([
+  await polls.update();
+
+  const query = polls.select([
     Query.include([DataType.Surveys]),
     Query.Survey.Tasker.ID.isNot([4, 6]),
     Query.Survey.Release.isGreater(new Date('2021-11-21')),
@@ -27,23 +29,23 @@ import polls, { Query, Order, DataType } from 'german-election-polls';
     Query.Survey.Sort.byParticipants(Order.Asc),
     Query.Survey.Sort.allResults(Order.Desc),
   ]);
-
-  console.log(query);
 })();
 ```
 
 ### JavaScript Example
 
 ```js
-const polls = require('german-election-polls').default;
+const polls = require('german-election-polls').Polls;
 const Query = require('german-election-polls').Query;
 const DataType = require('german-election-polls').DataType;
 const Order = require('german-election-polls').Order;
 
 (async () => {
-  await polls.shared.update();
+  const polls = new Polls();
 
-  const query = polls.shared.select([
+  await polls.update();
+
+  const query = polls.select([
     Query.include([DataType.Surveys]),
     Query.Survey.Tasker.ID.isNot([4, 6]),
     Query.Survey.Release.isGreater(new Date('2021-11-21')),
