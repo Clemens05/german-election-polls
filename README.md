@@ -35,7 +35,7 @@ import { Polls, Query, Order, DataType } from 'german-election-polls';
 ### JavaScript Example
 
 ```js
-const polls = require('german-election-polls').Polls;
+const Polls = require('german-election-polls').Polls;
 const Query = require('german-election-polls').Query;
 const DataType = require('german-election-polls').DataType;
 const Order = require('german-election-polls').Order;
