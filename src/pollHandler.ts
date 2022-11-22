@@ -14,6 +14,9 @@ export class PollHandler {
     return this._data;
   }
 
+  /**
+   * @deprecated This feature will be removed in a future version.
+   */
   public static shared: PollHandler = new PollHandler();
 
   public select(queries: ((...data: any) => PollData)[]): PollData {
